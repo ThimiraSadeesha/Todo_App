@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3 class="modal-header text-center">Create New ToDo</h3>
+        </div>
+        <div class="col-12">
+            <p class="d-flex flex-column flex-grow-1 py-4">
+
+                <mat-form-field>
+                    <mat-label>Title</mat-label>
+                    <input matInput placeholder="Title" name="title" [(ngModel)]="title" [value]="title">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Description</mat-label>
+                    <textarea matInput placeholder="Description" name="description" [(ngModel)]="description" [value]=""
+                        required></textarea>
+                </mat-form-field>
+            </p>
+        </div>
+        <div class="col-12 d-flex justify-content-end">
+            <button mat-raised-button>Clear</button>
+            <button mat-raised-button color="primary" (click)="onSubmit()">CREATE</button>
+        </div>
+    </div>
+</div>
